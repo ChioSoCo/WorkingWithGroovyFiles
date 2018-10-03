@@ -5,5 +5,5 @@ def hello(greet){ //defining a function called "hello" which receives an argumen
 		println 'wzup'
 	}
 }
-//return this; //returs the output of the execution of the function
+return this; //returs the output of the execution of the function
 
