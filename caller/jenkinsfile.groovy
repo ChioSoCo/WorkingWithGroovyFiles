@@ -6,7 +6,7 @@ node {
 			repoclone()
 			def responder
 			println responder
-			responder = load 'responder.groovy'
+			responder = load 'responder/responder.groovy'
 			println responder
 			responder.hello('hello')
 		} catch (Exception err){
