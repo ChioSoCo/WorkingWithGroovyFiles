@@ -1,5 +1,3 @@
-def gitUser = ''
-
 node {
 	stage ('Clone second git repository'){
 		try {
