@@ -14,6 +14,6 @@ node { //allocates a Jenkins executor and the workspace for the Pipeline
 	}
 }
 
-def repoclone(){ //defines a function called "repoclone"
+def repoclone(){ //defines a function to clone the repositories to the Jenkins' workspace
 	checkout([$class: 'GitSCM', branches: [[name: '*/'+'master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory'], [$class: 'MessageExclusion', excludeMessage: '(?s).*JENKINS_IGNORE.*']], submoduleCfg: [], userRemoteConfigs: [[url:"https://github.com/ChioSoCo/WorkingWithGroovyFiles.git"]]])
 	}
