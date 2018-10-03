@@ -1,6 +1,6 @@
 def hello(greet){
 	if (greet == "hello"){
-		println 'Hello grom the other side'
+		println 'Hello from responder file!'
 	} else {
 		println 'wzup'
 	}
