@@ -1,5 +1,7 @@
 node { //allocates a Jenkins executor and the workspace for the Pipeline
-	stage ('Clone second git repository'){ //Define a stage/step of the pipeline called "Clone second git repository"
+	stage ('Clone second git repository'){ 
+		        properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('H/15 * * * *')])])
+//Define a stage/step of the pipeline called "Clone second git repository"
 		try { //using try/catch structure to get the errors
 			deleteDir() //deletes all the data from the workspace
 			repoclone() //executes the repoclone function
